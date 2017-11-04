@@ -21,8 +21,13 @@ public class CourseServiceDatabase implements CourseService
 
 	@Override
 	public CourseModel selectCourse(String id_course) {
-        log.info("select student with npm {}", id_course);
+        log.info("select course with id course{}", id_course);
         return courseMapper.selectCourse(id_course);
 	}
 
+	@Override
+	public List<CourseModel> selectAllCourses() {
+		log.info("select all course");
+		return courseMapper.selectAllCourses();
+	}
 }
